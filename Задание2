@@ -11,15 +11,27 @@ def poww(x,y):
     return(math.pow(x,y));
 def lg(x,y):
     return(math.log(x,y));
-def down(x):
-    return(math.floor(x));
-def up(x):
-    return (math.ceil(x));
-print("Какое действие Вы хотите выполнить?\nСложение\nВычитание\nУмножение\nДеление\nВозведение в степень\nВзятие логарифма");
+def down(x,y):
+    y=int(y)
+    for i in range(y):
+        x=x*10;
+    x=math.floor(x);
+    for i in range(y):
+        x = x / 10;
+    return(x)
+def up(x,y):
+    y = int(y)
+    for i in range(y):
+        x = x * 10;
+    x = math.ceil(x);
+    for i in range(y):
+        x = x / 10;
+    return (x)
+print("Какое действие Вы хотите выполнить?\nСложение\nВычитание\nУмножение\nДеление\nВозведение в степень\nВзятие логарифма\nОкругление в меньшую сторону\nОкругление в большую сторону");
 deistvie=input();
 print('Введите 2 числа');
-a= int(input());
-b=int(input());
+a= float(input());
+b=float(input());
 if (deistvie=='Сложение'):
     print(summ(a,b))
 elif (deistvie=='Вычитание'):
@@ -32,3 +44,7 @@ elif (deistvie=='Возведение в степень'):
     print(poww(a,b))
 elif (deistvie=='Взятие логарифма'):
     print(lg(a,b))
+elif (deistvie=='Округление в меньшую сторону'):
+    print(down(a,b))
+elif (deistvie=='Округление в большую сторону'):
+    print(up(a,b))
