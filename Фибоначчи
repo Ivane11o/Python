@@ -1,0 +1,8 @@
+fib1=1;
+fib2=1;
+x=int(input());
+while (fib2<=x):
+    a=fib2
+    fib2=fib1+fib2;
+    fib1=a
+    if x==fib2: print('Фибоначчи')
