@@ -1,0 +1,12 @@
+a=int(input());
+a=str(a);
+b=input()
+b=b.replace('2','5')
+print (b)
+b=list(b);
+print(b);
+b.sort();
+print(b)
+d=('bamb','vamb')
+print(type(d),type(a))
+
