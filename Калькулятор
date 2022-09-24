@@ -1,0 +1,34 @@
+import math
+def summ(x, y):
+    return (x+y);
+def razn(x,y):
+    return (x-y);
+def umnoj(x,y):
+    return (x*y);
+def dell(x,y):
+    return (x/y);
+def poww(x,y):
+    return(math.pow(x,y));
+def lg(x,y):
+    return(math.log(x,y));
+def down(x):
+    return(math.floor(x));
+def up(x):
+    return (math.ceil(x));
+print("Какое действие Вы хотите выполнить?\nСложение\nВычитание\nУмножение\nДеление\nВозведение в степень\nВзятие логарифма");
+deistvie=input();
+print('Введите 2 числа');
+a= int(input());
+b=int(input());
+if (deistvie=='Сложение'):
+    print(summ(a,b))
+elif (deistvie=='Вычитание'):
+    print(razn(a,b))
+elif (deistvie=='Умножение'):
+    print(umnoj(a,b))
+elif (deistvie=='Деление'):
+    print(dell(a,b))
+elif (deistvie=='Возведение в степень'):
+    print(poww(a,b))
+elif (deistvie=='Взятие логарифма'):
+    print(lg(a,b))
