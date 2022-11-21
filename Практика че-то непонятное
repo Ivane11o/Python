@@ -1,0 +1,45 @@
+from random import randint
+n=int(input())
+k=[]
+percents=[1]
+chance=1
+counter=0
+counter2=0
+for i in range(n):
+    k.append(randint(0,1))
+print(k)
+for i in range(n):
+    chance=chance/2
+    percents.append(chance)
+print(chance*100,'%')
+print(percents)
+if k[0]==1:
+    for i in range(n):
+        if k[i]==1:
+            counter+=1
+        else:
+            print('Вероятность1', percents[counter])
+            counter=0
+    print('Вероятность1', percents[counter])
+    for i in range(n):
+        if k[i]==0:
+            counter2+=1
+        else:
+            print('Вероятность0', percents[counter2])
+            counter2=0
+    print('Вероятность0', percents[counter2])
+if k[0]==0:
+    for i in range(n):
+        if k[i]==0:
+            counter2+=1
+        else:
+            print('Вероятность0', percents[counter2])
+            counter2=0
+    print('Вероятность0', percents[counter2])
+    for i in range(n):
+        if k[i]==1:
+            counter+=1
+        else:
+            print('Вероятность1', percents[counter])
+            counter=0
+    print('Вероятность1', percents[counter])
